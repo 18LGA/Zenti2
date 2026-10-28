@@ -80,3 +80,39 @@
   .js-seg .chat-row{visibility:visible;opacity:1;transform:none;transition:none}
   .seg-pill{transition:none}
 }
+
+/* ===== Chat con forma de celular ===== */
+.segments .segment-chat{
+  width:min(100%,380px);align-self:center;justify-self:center;
+  padding:0 0 18px;gap:9px;
+  border:10px solid #0f172a;border-top-width:28px;border-radius:38px;
+  background:#efeae2 radial-gradient(rgba(0,0,0,.055) 1px,transparent 1.6px) 0 0/18px 18px!important;
+  box-shadow:0 0 0 1px rgba(148,163,184,.35),0 28px 60px rgba(15,23,42,.28),0 0 46px rgba(34,197,94,.14)
+}
+.segments .segment-chat:before{
+  content:"";position:absolute;top:-19px;left:50%;transform:translateX(-50%);
+  width:66px;height:8px;border-radius:9px;background:#243247
+}
+/* Cabecera tipo WhatsApp */
+.segments .segment-chat .chat-bubble.tiny{
+  display:flex;align-items:center;gap:10px;max-width:none;margin:0 0 6px;padding:11px 16px;
+  border-radius:24px 24px 0 0;background:#075e54!important;color:#fff!important;
+  font:700 14px/1.2 Manrope,sans-serif;letter-spacing:0;text-transform:none
+}
+.segments .segment-chat .chat-bubble.tiny:before{
+  content:"C";flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(135deg,#94a3b8,#cbd5e1);color:#0f172a;font:800 14px Manrope,sans-serif
+}
+.segments .segment-chat .chat-row{padding:0 14px}
+/* Burbujas */
+.segments .segment-chat .chat-bubble.in{
+  background:#fff!important;color:#111b21!important;border:0;box-shadow:0 1px 1px rgba(0,0,0,.14)
+}
+.segments .segment-chat .chat-bubble.out{
+  background:#d9fdd3!important;color:#111b21!important;border:0;box-shadow:0 1px 1px rgba(0,0,0,.14)
+}
+.segments .segment-chat .chat-bubble.out:after{
+  content:"\2713\2713";margin-left:8px;font-size:11px;letter-spacing:-2px;color:#53bdeb
+}
+.segments .seg-typing{right:14px;background:#d9fdd3;box-shadow:0 1px 1px rgba(0,0,0,.14)}
+.segments .seg-typing i{background:#25a06a}

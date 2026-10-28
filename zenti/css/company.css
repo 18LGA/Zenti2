@@ -1,0 +1,70 @@
+/* ZENTI · Qué es ZENTI */
+.company{
+  background:var(--white)
+}
+.company-grid{
+  display:grid;
+  grid-template-columns:.92fr 1.08fr;
+  gap:70px;
+  align-items:center
+}
+.company-image{
+  position:relative;
+  min-height:400px
+}
+.company-image img{
+  width:88%;
+  height:400px;
+  object-fit:cover;
+  border-radius:var(--radius);
+  display:block
+}
+.company-caption{
+  position:absolute;
+  right:0;
+  bottom:24px;
+  width:220px;
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:var(--white);
+  box-shadow:var(--shadow)
+}
+.company-caption strong{
+  display:block;
+  font:700 28px/1 "Space Grotesk";
+  color:var(--green)
+}
+.company-caption span{
+  font-size:13px;
+  color:var(--muted);
+  font-weight:600
+}
+.company-copy p{
+  font-size:19px;
+  max-width:560px
+}
+.point-list{
+  display:grid;
+  gap:15px;
+  margin-top:27px
+}
+.point{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  font-weight:600
+}
+@media (max-width:800px){
+  .company-grid{
+    grid-template-columns:1fr;
+  gap:38px
+  }
+  .company-image{
+    min-height:330px
+  }
+  .company-image img{
+    height:330px;
+  width:86%
+  }
+}

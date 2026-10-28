@@ -1,0 +1,111 @@
+/* ZENTI · Testimonios (Swiper) */
+.quote-card{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:27px;
+  background:var(--white);
+  transition:transform .2s,box-shadow .2s
+}
+.testimonials{
+  background:var(--violet-light)
+}
+.testimonial-swiper{
+  width:100%;
+  min-width:0;
+  padding:24px 2px 42px;
+  --swiper-theme-color:var(--violet);
+  --swiper-pagination-bullet-size:8px;
+  --swiper-pagination-bullet-inactive-color:var(--muted)
+}
+.testimonial-swiper .swiper-slide{
+  height:auto
+}
+.quote-card{
+  position:relative;
+  height:100%;
+  min-height:310px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  overflow:visible;
+  padding:46px 22px 20px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:var(--white);
+  text-align:center;
+  box-shadow:0 14px 32px rgba(15,23,42,.07)
+}
+.quote-card-top{
+  width:100%;
+  min-height:20px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end
+}
+.quote-stars{
+  flex:0 0 auto;
+  color:var(--green);
+  font:700 16px/1 "Source Sans 3",sans-serif;
+  letter-spacing:1px;
+  white-space:nowrap
+}
+.quote-avatar{
+  position:absolute;
+  top:-27px;
+  left:22px;
+  width:62px;
+  height:62px;
+  border:3px solid var(--white);
+  border-radius:50%;
+  object-fit:cover;
+  object-position:center;
+  background:var(--fog);
+  box-shadow:0 0 0 2px var(--green-light),0 7px 15px rgba(15,23,42,.12)
+}
+.quote-card p{
+  position:relative;
+  z-index:1;
+  max-width:290px;
+  margin:24px auto 0;
+  color:var(--ink);
+  font-size:16px;
+  line-height:1.45
+}
+.quote-mark{
+  position:absolute;
+  right:17px;
+  bottom:11px;
+  z-index:0;
+  color:var(--violet-light);
+  font:700 88px/.7 "Space Grotesk";
+  pointer-events:none
+}
+.quote-person{
+  width:100%;
+  margin-top:auto;
+  padding-top:18px;
+  text-align:center
+}
+.quote-person-name{
+  display:block;
+  color:var(--ink);
+  font:800 13px/1.2 Manrope
+}
+.quote-person-role{
+  display:block;
+  margin-top:4px;
+  color:var(--muted);
+  font:700 9px/1.2 Manrope;
+  letter-spacing:.04em;
+  text-transform:uppercase
+}
+@media (max-width:800px){
+  .testimonial-swiper{
+    margin-right:-24px;
+  width:calc(100% + 24px);
+  padding-right:24px
+  }
+  .quote-card{
+    min-height:275px
+  }
+}

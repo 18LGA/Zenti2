@@ -1,0 +1,132 @@
+/* ZENTI · Capacidades: tarjetas de herramientas */
+.feature-card{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:27px;
+  background:var(--white);
+  transition:transform .2s,box-shadow .2s
+}
+.feature-card:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow)
+}
+.icon-box{
+  height:45px;
+  width:45px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  background:var(--violet-light);
+  color:var(--violet-dark);
+  margin-bottom:22px
+}
+.icon-box.green{
+  background:var(--green-light);
+  color:var(--green-dark)
+}
+.icon-box svg{
+  width:23px;
+  stroke-width:1.8
+}
+.feature-card p{
+  margin-bottom:0
+}
+.capabilities{
+  background:var(--tint)
+}
+.cap-grid{
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:18px
+}
+.feature-card{
+  grid-column:span 4;
+  min-height:308px
+}
+.feature-card.chat{
+  background:var(--white)
+}
+.feature-card.catalog{
+  background:var(--violet-light)
+}
+.feature-card.dashboard{
+  background:var(--white)
+}
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:25px
+}
+.chip{
+  padding:6px 9px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--white);
+  font:800 11px Manrope;
+  color:var(--muted)
+}
+.status-list{
+  display:grid;
+  gap:8px;
+  margin-top:25px
+}
+.status{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  padding:8px 10px;
+  border-radius:10px;
+  background:var(--fog);
+  font-size:13px;
+  font-weight:700
+}
+.status i{
+  display:block;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--green)
+}
+.status:nth-child(2) i{
+  background:var(--violet)
+}
+@media (max-width:800px){
+  .cap-grid{
+    grid-template-columns:1fr
+  }
+  .feature-card{
+    grid-column:auto;
+  min-height:auto
+  }
+}
+.cap-grid.four{
+  grid-template-columns:repeat(2,minmax(0,1fr))
+}
+.cap-grid.four .feature-card{
+  grid-column:span 1;
+  min-height:auto
+}
+.cap-grid.four .feature-card.config{
+  background:var(--violet-light)
+}
+@media (max-width:800px){
+  .cap-grid.four{
+    grid-template-columns:1fr
+  }
+}
+.cap-grid.four{
+  grid-template-columns:repeat(2,minmax(0,1fr))
+}
+.cap-grid.four .feature-card{
+  grid-column:span 1;
+  min-height:auto
+}
+.cap-grid.four .feature-card.config{
+  background:var(--violet-light)
+}
+@media (max-width:800px){
+  .cap-grid.four{
+    grid-template-columns:1fr
+  }
+}

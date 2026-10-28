@@ -1,0 +1,101 @@
+/* ZENTI · Modo noche (se carga al final para sobrescribir) */
+html[data-theme="dark"] .theme-toggle .icon-sun{
+  display:block
+}
+html[data-theme="dark"] .theme-toggle .icon-moon{
+  display:none
+}
+html[data-theme="dark"]{
+  color-scheme:dark;
+  --green-dark:#86EFAC;
+  --violet-dark:#C4B5FD;
+  --green-light:#14341F;
+  --violet-light:#251C48;
+  --ink:#F1F5F9;
+  --muted:#94A3B8;
+  --line:#1E293B;
+  --white:#111A2E;
+  --fog:#162036;
+  --tint:#0E1A2B;
+  --bg:#0B1120;
+  --surface-tinted:#10241F;
+  --surface-violet:#1A1A38;
+  --shadow:0 18px 50px rgba(0,0,0,.4)
+}
+html[data-theme="dark"] body,html[data-theme="dark"] .steps,html[data-theme="dark"] .company,html[data-theme="dark"] .faq,html[data-theme="dark"] .site-footer{
+  background:var(--bg)
+}
+html[data-theme="dark"] .site-header{
+  background:rgba(11,17,32,.94)
+}
+html[data-theme="dark"] .hero{
+  background:linear-gradient(180deg,var(--bg),var(--tint))
+}
+html[data-theme="dark"] .segments{
+  background:linear-gradient(180deg,var(--bg),var(--fog))
+}
+html[data-theme="dark"] .btn-primary:hover{
+  background:#15803D
+}
+html[data-theme="dark"] .step-card{
+  background:var(--white)
+}
+html[data-theme="dark"] .step-card:nth-child(2){
+  background:var(--surface-tinted)
+}
+html[data-theme="dark"] .step-card:nth-child(3){
+  background:var(--surface-violet)
+}
+html[data-theme="dark"] .step-mockup{
+  border-color:var(--line);
+  background:var(--fog)
+}
+html[data-theme="dark"] .catalog-stage,html[data-theme="dark"] .qr-stage,html[data-theme="dark"] .chat-stage{
+  background:var(--fog)
+}
+html[data-theme="dark"] .qr-screen,html[data-theme="dark"] .qr-card,html[data-theme="dark"] .chat-window{
+  background:var(--white)
+}
+html[data-theme="dark"] .catalog-tag{
+  background:rgba(17,26,46,.93)
+}
+html[data-theme="dark"] .step-mockup img.qr-payment-reference,html[data-theme="dark"] .step-mockup img.catalog-reference{
+  filter:none
+}
+html[data-theme="dark"] .company-image img{
+  filter:brightness(.78) contrast(1.04)
+}
+html[data-theme="dark"] .qr-phone,html[data-theme="dark"] .automation-phone{
+  background:#020617;
+  border-color:#334155
+}
+html[data-theme="dark"] .phone-chat{
+  background:var(--fog)
+}
+html[data-theme="dark"] .automation-panel,html[data-theme="dark"] .automation-node{
+  border-color:var(--line)
+}
+html[data-theme="dark"] .flow-step em{
+  background:var(--green);
+  color:#fff
+}
+html[data-theme="dark"] .segment-card,html[data-theme="dark"] .quote-card,html[data-theme="dark"] .feature-card{
+  box-shadow:none
+}
+
+/* ---------- Imágenes con fondo claro en modo noche ---------- */
+/* Portada: se cambia a la versión con fondo transparente, así toma el color de la página */
+html[data-theme="dark"] .hero-slide img.img-light{
+  display:none
+}
+html[data-theme="dark"] .hero-slide img.img-dark{
+  display:block;
+  -webkit-mask-image:none;
+  mask-image:none;
+  filter:drop-shadow(0 16px 34px rgba(0,0,0,.45))
+}
+/* Cómo funciona (QR y catálogo): ya no tienen fondo propio, se ven sobre el panel oscuro */
+html[data-theme="dark"] .step-mockup img.qr-payment-reference,
+html[data-theme="dark"] .step-mockup img.catalog-reference{
+  filter:drop-shadow(0 10px 22px rgba(0,0,0,.4))
+}

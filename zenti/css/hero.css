@@ -1,0 +1,162 @@
+/* ZENTI · Portada (hero) */
+.hero{
+  overflow:hidden;
+  padding:56px 0 56px;
+  background:linear-gradient(180deg,var(--white),var(--tint))
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.04fr .96fr;
+  align-items:center;
+  gap:50px
+}
+.hero-copy>p{
+  font-size:21px;
+  max-width:590px;
+  margin-bottom:32px
+}
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px
+}
+.hero-proof{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:26px;
+  font-size:15px;
+  font-weight:600;
+  color:var(--green-dark)
+}
+.proof-dot{
+  height:28px;
+  width:28px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--green-light);
+  color:var(--green)
+}
+.visual-wrap{
+  position:relative;
+  min-height:438px;
+  min-width:0;
+  isolation:isolate
+}
+.hero-visual{
+  position:relative;
+  width:100%;
+  min-width:0;
+  padding:12px 8px
+}
+.hero-visual:before,.hero-visual:after{
+  content:"";
+  position:absolute;
+  z-index:0;
+  border-radius:50%;
+  pointer-events:none;
+  filter:blur(14px);
+  opacity:.72
+}
+.hero-visual:before{
+  width:132px;
+  height:132px;
+  top:28px;
+  right:4px;
+  background:var(--violet-light)
+}
+.hero-visual:after{
+  width:112px;
+  height:112px;
+  bottom:12px;
+  left:12px;
+  background:var(--green-light)
+}
+.hero-slide{
+  position:relative;
+  z-index:1;
+  isolation:isolate;
+  min-height:414px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:visible
+}
+.hero-slide:before,.hero-slide:after{
+  content:"";
+  position:absolute;
+  z-index:0;
+  pointer-events:none;
+  filter:blur(2px);
+  opacity:.68
+}
+.hero-slide:before{
+  width:106px;
+  height:106px;
+  right:14px;
+  bottom:38px;
+  border:16px solid var(--green-light);
+  border-radius:50%
+}
+.hero-slide:after{
+  width:64px;
+  height:64px;
+  top:42px;
+  left:30px;
+  border:11px solid var(--violet-light);
+  border-radius:50%
+}
+.hero-slide img{
+  display:block;
+  width:100%;
+  height:414px;
+  object-fit:contain;
+  object-position:center;
+  position:relative;
+  z-index:1;
+  filter:none;
+  -webkit-mask-image:radial-gradient(ellipse 78% 88% at 53% 50%,#000 52%,rgba(0,0,0,.96) 66%,rgba(0,0,0,.62) 80%,transparent 100%);
+  mask-image:radial-gradient(ellipse 78% 88% at 53% 50%,#000 52%,rgba(0,0,0,.96) 66%,rgba(0,0,0,.62) 80%,transparent 100%)
+}
+/* Versión de la portada para modo noche (fondo transparente): solo se muestra en dark-mode.css */
+.hero-slide img.img-dark{
+  display:none
+}
+@media (max-width:800px){
+  .hero{
+    padding:40px 0 48px
+  }
+  .hero-grid{
+    grid-template-columns:1fr;
+  gap:38px
+  }
+  .hero-copy>p{
+    font-size:19px
+  }
+  .visual-wrap{
+    min-height:346px;
+  order:2
+  }
+  .hero-visual{
+    padding:6px 4px
+  }
+  .hero-slide,.hero-slide img{
+    min-height:334px;
+  height:334px
+  }
+  .hero-slide:before{
+    width:82px;
+  height:82px;
+  border-width:12px;
+  right:10px;
+  bottom:28px
+  }
+  .hero-slide:after{
+    width:52px;
+  height:52px;
+  border-width:9px;
+  top:30px;
+  left:18px
+  }
+}

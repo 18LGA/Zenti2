@@ -1,0 +1,121 @@
+/* ZENTI · Preguntas frecuentes */
+.faq{
+  background:var(--white)
+}
+.faq-grid{
+  display:grid;
+  grid-template-columns:.7fr 1.3fr;
+  gap:72px
+}
+.faq-note{
+  padding:25px;
+  border-radius:20px;
+  background:var(--tint);
+  color:var(--green-dark);
+  font-weight:600
+}
+.accordion-wrapper{
+  border-top:1px solid var(--line)
+}
+.faq-item{
+  border-bottom:1px solid var(--line)
+}
+.accordion-toggle{
+  appearance:none;
+  border:0;
+  width:100%;
+  padding:23px 0;
+  background:transparent;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+  text-align:left;
+  color:var(--ink);
+  font:700 18px/1.3 "Space Grotesk"
+}
+.plus{
+  width:28px;
+  height:28px;
+  flex:0 0 28px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--violet-light);
+  color:var(--violet-dark);
+  font:24px/1 "Source Sans 3";
+  transition:transform .2s
+}
+.faq-item.open .plus{
+  transform:rotate(45deg)
+}
+.faq-answer{
+  display:grid;
+  grid-template-rows:0fr;
+  transition:grid-template-rows .25s ease
+}
+.faq-answer[hidden]{
+  display:none
+}
+.faq-answer>div{
+  overflow:hidden
+}
+.faq-answer p{
+  padding-bottom:0;
+  margin-bottom:0
+}
+.faq-item.open .faq-answer{
+  grid-template-rows:1fr
+}
+.faq-item.open .faq-answer p{
+  padding-bottom:22px
+}
+.faq-content{
+  min-width:0
+}
+.faq-followup{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:16px;
+  padding-top:32px;
+  text-align:center
+}
+.faq-followup p{
+  margin:0;
+  max-width:420px;
+  font-size:17px
+}
+.faq-followup .btn{
+  min-width:170px
+}
+@media (max-width:800px){
+  .faq-grid{
+    grid-template-columns:1fr;
+  gap:38px
+  }
+  .faq-grid{
+    gap:30px
+  }
+}
+.faq-answer{
+  display:grid;
+  grid-template-rows:0fr;
+  transition:grid-template-rows .42s cubic-bezier(.22,.61,.36,1)
+}
+.faq-answer>div{
+  overflow:hidden;
+  opacity:0;
+  transform:translateY(-8px);
+  transition:opacity .32s ease .04s,transform .42s cubic-bezier(.22,.61,.36,1)
+}
+.faq-item.open .faq-answer{
+  grid-template-rows:1fr
+}
+.faq-item.open .faq-answer>div{
+  opacity:1;
+  transform:none
+}
+.faq-item.open .plus{
+  transform:rotate(45deg)
+}

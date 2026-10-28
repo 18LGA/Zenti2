@@ -1,0 +1,280 @@
+/* ZENTI · Para quién es: Empresarial / Negocios pequeños */
+.segments{
+  background:var(--white)
+}
+.segment-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px
+}
+.segment-card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  padding:34px 30px 30px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:var(--white);
+  transition:transform .2s,box-shadow .2s
+}
+.segment-card:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow)
+}
+.segment-card h3{
+  margin:20px 0 10px;
+  font-size:clamp(24px,2.1vw,31px);
+  line-height:1.05
+}
+.segment-card>p{
+  margin-bottom:0;
+  font-size:16px
+}
+.segment-list{
+  list-style:none;
+  margin:22px 0 0;
+  padding:0;
+  display:grid;
+  gap:13px
+}
+.segment-list li{
+  display:flex;
+  gap:11px;
+  align-items:flex-start;
+  font-weight:600;
+  font-size:15px
+}
+.segment-list .tick{
+  flex:0 0 24px;
+  height:24px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--green-light);
+  color:var(--green-dark);
+  font-size:14px
+}
+.flow-step{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:14px;
+  font-weight:700;
+  color:var(--ink)
+}
+.flow-step em{
+  font-style:normal;
+  flex:0 0 24px;
+  height:24px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--ink);
+  color:#fff;
+  font:800 10px Manrope,sans-serif
+}
+@media (max-width:800px){
+  .segment-grid{
+    grid-template-columns:1fr
+  }
+  .segment-card{
+    padding:28px 22px
+  }
+}
+.segments{
+  background:linear-gradient(180deg,#fff 0%,var(--fog) 100%)
+}
+.segment-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:26px;
+  align-items:stretch
+}
+.segment-card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  padding:36px 30px 30px;
+  border:1px solid var(--line);
+  border-radius:34px;
+  background:var(--white);
+  box-shadow:0 10px 30px rgba(15,23,42,.05);
+  overflow:hidden;
+  transition:transform .25s,box-shadow .25s
+}
+.segment-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 26px 54px rgba(15,23,42,.1)
+}
+.segment-card:before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:6px;
+  background:linear-gradient(90deg,var(--violet) 0%,var(--violet-light) 100%)
+}
+.segment-card.pyme{
+  background:var(--tint)
+}
+.segment-card.pyme:before{
+  background:linear-gradient(90deg,var(--green) 0%,var(--green-light) 100%)
+}
+.segment-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  align-self:flex-start;
+  padding:8px 14px;
+  border-radius:999px;
+  font:800 11px/1 Manrope,sans-serif;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  background:var(--violet-light);
+  color:var(--violet-dark)
+}
+.segment-card.pyme .segment-kicker{
+  background:var(--green-light);
+  color:var(--green-dark)
+}
+.segment-kicker:before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:currentColor;
+  opacity:.55
+}
+.segment-card h3{
+  margin:22px 0 12px;
+  font-size:clamp(26px,2.2vw,33px);
+  line-height:1.04
+}
+.segment-lead{
+  margin-bottom:0;
+  font-size:16px
+}
+.segment-chat{
+  margin:24px 0 22px;
+  padding:18px;
+  border-radius:24px;
+  background:var(--white);
+  border:1px solid var(--line);
+  display:grid;
+  gap:9px;
+  box-shadow:0 8px 22px rgba(15,23,42,.05)
+}
+.chat-row{
+  display:flex
+}
+.chat-row.out{
+  justify-content:flex-end
+}
+.chat-bubble{
+  max-width:80%;
+  padding:11px 15px;
+  border-radius:16px;
+  font-size:14px;
+  font-weight:600;
+  line-height:1.35;
+  background:var(--fog);
+  color:var(--ink);
+  border:1px solid var(--line)
+}
+.chat-row.out .chat-bubble{
+  background:var(--green-light);
+  border-color:transparent;
+  color:var(--green-dark)
+}
+.chat-bubble.tiny{
+  max-width:100%;
+  padding:0 2px 2px;
+  font:800 10px/1.2 Manrope,sans-serif;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--muted);
+  background:transparent;
+  border:0
+}
+.segment-list{
+  list-style:none;
+  margin:0 0 22px;
+  padding:0;
+  display:grid;
+  gap:12px
+}
+.segment-list li{
+  display:flex;
+  gap:11px;
+  align-items:flex-start;
+  font-weight:600;
+  font-size:15px
+}
+.segment-list .tick{
+  flex:0 0 26px;
+  height:26px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--violet-light);
+  color:var(--violet-dark);
+  font-size:14px
+}
+.segment-card.pyme .segment-list .tick{
+  background:var(--green-light);
+  color:var(--green-dark)
+}
+.segment-steps{
+  display:grid;
+  gap:8px;
+  margin-bottom:26px
+}
+.flow-step{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  padding:11px 14px;
+  border-radius:15px;
+  background:var(--fog);
+  font-size:14px;
+  font-weight:700;
+  color:var(--ink)
+}
+.segment-card.pyme .flow-step{
+  background:var(--white)
+}
+.flow-step em{
+  font-style:normal;
+  flex:0 0 26px;
+  height:26px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--ink);
+  color:#fff;
+  font:800 10px Manrope,sans-serif
+}
+.segment-cta{
+  margin-top:auto;
+  align-self:flex-start
+}
+@media (max-width:800px){
+  .segment-grid{
+    grid-template-columns:1fr
+  }
+  .segment-card{
+    padding:32px 22px 26px;
+  border-radius:28px
+  }
+}
+
+/* Viene justo después de "Cómo funciona" (ambas claras): menos aire arriba */
+.segments{
+  padding-top:24px
+}
+@media (max-width:800px){
+  .segments{
+    padding-top:16px
+  }
+}

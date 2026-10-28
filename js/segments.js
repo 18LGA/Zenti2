@@ -84,6 +84,15 @@
 
   show('empresa', false);
 
+  // Pausar las animaciones infinitas cuando la sección no se ve
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) {
+      sec.classList.toggle('seg-live', e[0].isIntersecting);
+    }, { rootMargin: '120px 0px' }).observe(sec);
+  } else {
+    sec.classList.add('seg-live');
+  }
+
   // La conversación arranca cuando la sección entra en pantalla
   function start() {
     started = true;
